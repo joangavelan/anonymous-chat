@@ -12,8 +12,8 @@ const theme = {
     },
     white: '#CECECF'
   },
-  font: {
-    primary: 'Roboto, Helvetica, Arial, sans-serif'
+  fonts: {
+    primary: 'Helvetica, Arial, sans-serif'
   }
 }
 

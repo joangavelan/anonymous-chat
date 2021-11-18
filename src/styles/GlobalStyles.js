@@ -1,4 +1,3 @@
-
 import { createGlobalStyle } from 'styled-components/macro';
 import theme from './theme';
 const { colors, fonts } = theme;
@@ -8,6 +7,7 @@ const GlobalStyles = createGlobalStyle`
     font-size: 62.5%;
     box-sizing: border-box;
   }
+
   *,
   *::before,
   *::after {
@@ -15,17 +15,20 @@ const GlobalStyles = createGlobalStyle`
     margin: 0;
     padding: 0;
   }
+
   html,
   body {
     width: 100%;
     max-width: 100%;
   }
+
   body {
     min-height: 100%;
     overflow-x: hidden;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
     font-family: ${fonts.primary};
+    background-color: ${colors.dark[200]};
     color: ${colors.white};
   }
 
