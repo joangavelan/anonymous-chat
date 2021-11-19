@@ -69,10 +69,6 @@ const App = () => {
     const newUser = generateUser();
     setUsers([...users, newUser]);
     sessionStorage.setItem('user', JSON.stringify(newUser));
-
-    return () => {
-      sessionStorage.clear();
-    }
   }, []);
 
   // useEffect(() => {
