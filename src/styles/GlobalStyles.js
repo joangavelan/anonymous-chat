@@ -28,7 +28,7 @@ const GlobalStyles = createGlobalStyle`
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
     font-family: ${fonts.primary};
-    background-color: ${colors.dark[200]};
+    background-color: ${colors.dark[500]};
     color: ${colors.white};
   }
 
@@ -40,16 +40,24 @@ const GlobalStyles = createGlobalStyle`
   
   button {
     display: inline-block;
-    color: ${colors.white};
+    color: ${colors.dark[200]};
     font-family: ${fonts.primary};
     border: 0;
+    border-radius: .8rem;
     padding: 10px 20px;
     cursor: pointer;
     &:hover,
     &:focus {
-      color: ${colors.white};
       outline: 0;
     }
+  }
+
+  input {
+    border: 0;
+    border-radius: .8rem;
+    outline: 0;
+    padding: 1.5rem;
+    background-color: ${colors.white};
   }
 `
 
