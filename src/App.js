@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import User from './components/User'
 import styled from 'styled-components'
 import GlobalStyles from './styles/GlobalStyles'
@@ -7,8 +7,8 @@ import Search from './components/Search'
 import CreateChannelButton from './components/CreateChannelButton'
 import SidebarSection from './components/SidebarSection'
 import { channels } from './data/channels'
-import { users } from './data/users'
 import { messages } from './data/messages'
+import { generateUser } from './utils'
 const { colors } = theme;
 
 const Container = styled.div`
@@ -56,7 +56,29 @@ const Chat = styled.main`
   }
 `
 
+
 const App = () => {
+  const [users, setUsers] = useState([]);
+
+  useEffect(() => {
+    // if(!sessionStorage.getItem('users')) sessionStorage.setItem('users', '[]');
+    // const users = JSON.parse(sessionStorage.getItem('users'));
+    // const newUser =  generateUser();
+    // users.push(newUser);
+    // setUsers(users);
+    const newUser = generateUser();
+    setUsers([...users, newUser]);
+    sessionStorage.setItem('user', JSON.stringify(newUser));
+
+    return () => {
+      sessionStorage.clear();
+    }
+  }, []);
+
+  // useEffect(() => {
+  //   sessionStorage.setItem('users', JSON.stringify(users));
+  // }, [users])
+
   return (
     <Container>
       <GlobalStyles />

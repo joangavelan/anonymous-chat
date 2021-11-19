@@ -8,7 +8,7 @@ const Container = styled.div`
 
   & > h3 {
     font-size: 1.6rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.2rem;
     text-transform: uppercase;
     color: ${colors.dark[600]};
   }
