@@ -8,9 +8,11 @@ const theme = {
       100: '#181A1B',
       200: '#161819',
       300: '#454545',
-      400: '#27292E'
+      400: '#27292E',
+      500: '#1C1E1F',
+      600: '#3D3E3E'
     },
-    white: '#CECECF'
+    white: '#eee'
   },
   fonts: {
     primary: 'Helvetica, Arial, sans-serif'
